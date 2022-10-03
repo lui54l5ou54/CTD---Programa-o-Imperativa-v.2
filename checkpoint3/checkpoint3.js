@@ -35,7 +35,7 @@ let aluno = {
   }
   
 
-  const teste1 = new alunoTeste("Luis", duas, [9.8, 10.7, 5.1]);
+  const teste1 = new alunoTeste("Luis", 2, [9.8, 10.7, 5.1]);
 
   const teste2 = new alunoTeste("Fernando", 5, [-35, 14, 10.5]);
 
@@ -97,7 +97,8 @@ let aluno = {
       for(let a of this.listaEstudantes){
           resultadoAlunos.push(this.aprovacao(this.mediaAlunos(a), a.faltas))
       }
-      return resultadoAlunos
+      return resultadoAlunos;
+      
     }
   }
   
@@ -112,4 +113,6 @@ let aluno = {
   curso.novoAluno(teste2);
   curso.novoAluno(teste3);
   curso.novoAluno(teste4);
+  console.log("Alunos aprovados:")
+  console.log("Luis","Fernando","Almeida","Sousa");
   console.log(curso.listaAprovados());
